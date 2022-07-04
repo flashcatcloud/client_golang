@@ -187,3 +187,23 @@ func (d *Desc) String() string {
 		d.variableLabels,
 	)
 }
+
+func (d *Desc) Name() string {
+	return d.fqName
+}
+
+func (d *Desc) Help() string {
+	return d.help
+}
+
+func (d *Desc) ConstLabels() []*dto.LabelPair {
+	return d.constLabelPairs
+}
+
+func (d *Desc) VariableLabels() []string {
+	return d.variableLabels
+}
+
+func (d *Desc) Err() error {
+	return d.err
+}
